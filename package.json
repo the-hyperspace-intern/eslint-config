@@ -1,0 +1,55 @@
+{
+  "name": "@ginkoe/eslint-config",
+  "version": "0.0.1",
+  "description": "(•́⍜•̀)",
+  "main": "index.js",
+  "repository": "git@github.com:Ginkoe/eslint-config-ginkoe.git",
+  "author": "Ginkoe <ginkoe@protonmail.com>",
+  "scripts": {
+    "lint": "eslint --fix \"*.js\"",
+    "prepare": "husky install $PWD/.husky"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.2.1",
+    "eslint": "^7",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.5",
+    "prettier": "^2.5.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./index.js"
+    ],
+    "rules": {
+      "max-lines": "off"
+    },
+    "ignorePatterns": [
+      "examples"
+    ],
+    "root": true
+  },
+  "prettier": {
+    "endOfLine": "auto",
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "all"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write"
+    ],
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "license": "MIT"
+}
