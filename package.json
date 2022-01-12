@@ -3,11 +3,15 @@
   "version": "0.0.1",
   "description": "(•́⍜•̀)",
   "main": "index.js",
+  "files": [
+    "*.js"
+  ],
   "repository": "git@github.com:Ginkoe/eslint-config-ginkoe.git",
   "author": "Ginkoe <ginkoe@protonmail.com>",
   "scripts": {
     "lint": "eslint --fix \"*.js\"",
-    "prepare": "husky install $PWD/.husky"
+    "prepare": "husky install $PWD/.husky",
+    "release": "np"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.33.0",
@@ -25,7 +29,8 @@
     "eslint": "^7",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.5",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "np": "^7"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +58,13 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
+  },
+  "np": {
+    "branch": "main"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "license": "MIT"
 }
