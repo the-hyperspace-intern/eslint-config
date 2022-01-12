@@ -1,6 +1,6 @@
 {
   "name": "@ginkoe/eslint-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "(•́⍜•̀)",
   "main": "index.js",
   "files": [
@@ -29,8 +29,8 @@
     "eslint": "^7",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.5",
-    "prettier": "^2.5.1",
-    "np": "^7"
+    "np": "^7",
+    "prettier": "^2.5.1"
   },
   "eslintConfig": {
     "extends": [
